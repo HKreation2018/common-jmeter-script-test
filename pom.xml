@@ -50,10 +50,8 @@
                         <threads>${threadCount}</threads>
                         <rampup>${rampupTime}</rampup>
                         <duration>${durationSecond}</duration>
+						<loopcount>${loopCountNo}</loopcount>
                    </propertiesUser>
-				  <testFilesIncluded>
-				       <jMeterTestFile>${fileName}</jMeterTestFile>
-                   </testFilesIncluded> 
                </configuration>
                 <executions>
                    <execution>

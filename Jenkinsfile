@@ -16,13 +16,7 @@ pipeline {
       }
     }
 
- /*   stage('Test') {
-      steps {
-          bat "mvn test"
-      }
-    } */
-
-      stage('Deploy Development') {
+    stage('Deploy Development') {
       environment {
         ENVIRONMENT = 'Sandbox'
         APP_NAME = 'common-jmeter-script-test'
@@ -31,19 +25,10 @@ pipeline {
             bat 'mvn -U -V -e -B -DskipTests deploy -DmuleDeploy -Dmule.version="%MULE_VERSION%" -Danypoint.username="%DEPLOY_CREDS_USR%" -Danypoint.password="%DEPLOY_CREDS_PSW%" -Dcloudhub.app="%APP_NAME%" -Dcloudhub.environment="%ENVIRONMENT%" -Dcloudhub.worker="%WORKER%"'
       }
     } 
-   /* stage('Deploy Production') {
-      environment {
-        ENVIRONMENT = 'Production'
-        APP_NAME = '<API-NAME>'
-      }
-      steps {
-            bat 'mvn -U -V -e -B -DskipTests deploy -DmuleDeploy -Dmule.version="%MULE_VERSION%" -Danypoint.username="%DEPLOY_CREDS_USR%" -Danypoint.password="%DEPLOY_CREDS_PSW%" -Dcloudhub.app="%APP_NAME%" -Dcloudhub.environment="%ENVIRONMENT%" -Dcloudhub.bg="%BG%" -Dcloudhub.worker="%WORKER%"'
-      }
-    } */
 	
-	stage('performance test') {       
+	/*stage('performance test') {       
       steps {
-             bat 'mvn verify -DthreadCount=${THREADS} -DrampupTime=${RAMPUP} -DdurationSecond=${DURATION}'
+             bat 'mvn verify -DthreadCount=${THREADS} -DrampupTime=${RAMPUP} -DdurationSecond=${DURATION} -DloopCountNo=${LOOPCOUNT}'
       }
 	  
 	  post {
@@ -53,6 +38,6 @@ pipeline {
 			publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'target/jmeter/reports/worldTimeZoneTest', reportFiles: 'index.html', reportName: 'Performance Report', reportTitles: ''])
         }
 	}
-    }
+    }*/
   }
 }

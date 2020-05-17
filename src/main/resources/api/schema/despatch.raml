@@ -1,0 +1,306 @@
+#%RAML 1.0 DataType
+
+type: object
+properties:
+  despatchOrders:
+    type: object
+    properties:
+      processingMode: 
+          description: Synchronous or Asynchroneous mode
+          type: string
+          required: true
+          minLength: 1
+          maxLength: 15
+      companyCode: 
+          description: organizational entity responsible for the delivery
+          type: string
+          required: true
+          minLength: 3
+          maxLength: 4          
+      scenario:   
+          description: identify the type of delivery (replenishment, despatch, subcontracting, external, return)
+          type: string
+          required: true
+          minLength: 1
+          maxLength: 100
+      profile: 
+          description: a way to group idKey sharing the same oragnizational data (sales org + document type)
+          type: string
+          minLength: 1
+          maxLength: 10
+          required: false
+      source: 
+          description: location (plant code) where the delivery was created
+          type: string
+          minLength: 4
+          maxLength: 10
+          required: false
+      sourceType: 
+          description: type of location (plant or customer) where the delivery was created
+          type: string
+          maxLength: 20
+          required: false
+      destination: 
+          description: ShipTo or Vendor
+          type: string
+          required: true
+          minLength: 4
+          maxLength: 10
+      destinationType: 
+          description: type of location (plant or customer) where the delivery will be shiped
+          type: string
+          required: true
+          maxLength: 20
+      referenceOrderDocument: 
+          description: Original sales order used in case of back order creation
+          type: string
+          maxLength: 10
+          required: false
+      referenceBillingDocument: 
+          description: Original billing document used in case of copy in reference (return, credit memo, correction)
+          type: string
+          maxLength: 10
+          required: false
+      requestedDeliveryDate: 
+          description: Expected Delivery date at destination location
+          type: string
+          required: true
+          minLength: 22
+          maxLength: 25
+      documentDate: 
+          description: date the document was received / sent
+          type: string
+          minLength: 22
+          maxLength: 25
+          required: false
+      customerPurchaseOrderDate: 
+          description: customer purchase order date
+          type: string
+          minLength: 22
+          maxLength: 25
+          required: false
+      customerPurchaseOrderType: 
+          description: customer purchase order method
+          type: string
+          minLength: 0
+          maxLength: 25
+          required: false
+      customerPurchaseOrderNumber:
+          description: Customer purchase order number
+          type: string
+          minLength: 0
+          maxLength: 35
+          required: false
+      customerReference: 
+          description: customer own reference
+          type: string
+          minLength: 0
+          maxLength: 12
+          required: false
+      shipToPurchaseOrderDate: 
+          description: ship to  purchase order date
+          type: string
+          minLength: 22
+          maxLength: 25
+          required: false
+      shipToPurchaseOrderType: 
+          description: sip to purchase order method
+          type: string
+          maxLength: 20
+          required: false
+      shipToPurchaseOrderNumber: 
+          description: Ship-to Party's Purchase Order Number
+          type: string
+          minLength: 0
+          maxLength: 35
+          required: false
+      shipToReference: 
+          description: ship to own reference
+          type: string
+          minLength: 0
+          maxLength: 12
+          required: false
+      purchaseOrderSupplement: 
+          description: Purchase Order Supplement
+          type: string
+          minLength: 0
+          maxLength: 4
+          required: false
+      incotermPart1: 
+          description: incoterms part 1
+          type: string
+          minLength: 0
+          maxLength: 3
+          required: false
+      incotermPart2: 
+          description: incoterms part 2
+          type: string
+          minLength: 0
+          maxLength: 28
+          required: false
+      orderReason: 
+          description: reason of the order (influence item category determination + g/l account)
+          type: string
+          minLength: 0
+          maxLength: 3
+          required: false
+      referenceDocumentNumber: 
+          description: document reference
+          type: string
+          minLength: 0
+          maxLength: 16
+          required: false
+      directToCustRefNumber:
+          description: Reference Order in DTC flow (regional or X-box)
+          type: string
+          minLength: 0
+          maxLength: 10
+          required: false
+      meanOfTransport: 
+          description: The mean of transport used to ship the goods
+          type: string
+          minLength: 0
+          maxLength: 2
+          required: false
+      shippingStrategy: 
+          description: Strategy for the delivery of goods from the vendor to the customer
+          type: string
+          maxLength: 2
+          required: false
+      billOfLading: 
+          description: Bill of Lading (unique identifyer for reconciliation movement)
+          type: string
+          minLength: 0
+          maxLength: 12
+          required: false
+      currentOrderNumber: 
+          description: Current Number of Order
+          type: number
+          minimum: 0
+          maximum: 4
+          required: false
+      totalOrderNumber: 
+          description: Total Number of Order
+          type: number
+          minimum: 0
+          maximum: 4
+          required: false
+      customerDelvAppointmentSt: 
+          description: Start date of the appointment asked by the customer (in the destination time zone)
+          type: string
+          minLength: 22
+          maxLength: 25
+          required: false
+      customerDelvAppointmentEnd: 
+          description: End date of the appointment asked by the customer (in the destination time zone)
+          type: string
+          minLength: 22
+          maxLength: 25
+          required: false
+      latestDeliveryDate: 
+          description: Latest date the customer will accept the goods
+          type: string
+          minLength: 22
+          maxLength: 25
+          required: false
+      forwardingAgent: 
+          description: The haulier responsible of the transport
+          type: string
+          minLength: 0
+          maxLength: 10
+          required: false
+      customAgent: 
+          description: The custom agent responsible of the custom clearance
+          type: string
+          minLength: 0
+          maxLength: 10
+          required: false
+      documentTexts:
+          description: Multiple document Texts
+          type: object
+          required: false
+          properties:
+            documentText: 
+             description: document description text
+             type: array
+             required: false
+             minItems: 1
+             items:
+               type: object
+               properties:
+                 textId:
+                   description: Id of the text  like comment, shipping instruction
+                   type: string
+                   minLength: 4
+                   maxLength: 4
+                   required: false
+                 textLanguage:
+                   description: Language
+                   type: string
+                   minLength: 1
+                   maxLength: 2
+                   required: false
+                 text:
+                   description: free text
+                   type: string
+                   minLength: 0
+                   maxLength: 132
+                   required: false
+      items:
+        description: list of items in the sales order
+        type: object
+        required: false
+        properties:
+          item:
+            description: sales order item
+            type: array
+            minItems: 1
+            required: true
+            items:
+              type: object
+              properties:
+                position:
+                  description: Position of the item
+                  type: string
+                  maxLength: 6
+                  required: true
+                materialReference:
+                  description: reference identifying the product shipped
+                  type: string
+                  minLength: 0
+                  maxLength: 18
+                  required: false
+                customerMaterialReference:
+                  description: description of the material shipped
+                  type: string
+                  minLength: 0
+                  maxLength: 35
+                  required: false
+                quantity:
+                  description: quantity planned to be shipped in trading unit of measure
+                  type: string
+                  minLength: 1
+                  maxLength: 16
+                  required: true
+                uom:
+                  description: trading unit of measure
+                  type: string
+                  minLength: 1
+                  maxLength: 3
+                  required: true
+                batchNumber:
+                  description: batch number
+                  type: string
+                  minLength: 0
+                  maxLength: 10
+                  required: false
+                stockType:
+                  description: targeted stock type (determination of the item category)
+                  type: string
+                  minLength: 0
+                  maxLength: 20
+                  required: false
+                free:
+                  description: is the item sell for free (determination of item category)
+                  type: string
+                  required: false

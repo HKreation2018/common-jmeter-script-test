@@ -1,0 +1,77 @@
+#%RAML 1.0
+title: common-jmeter-script-test
+baseUri: https://localhost:8081/common-jemter-script-testdev/v1.0
+version: 1.0
+protocols: [ HTTPS ]
+mediaType: 
+  - application/json
+
+uses:
+  schema: schema/library.raml
+
+resourceTypes:
+  despatch_order: !include libs/resourceTypes/post.raml
+
+traits: 
+  # headers
+  headersRequired: !include traits/headers.raml
+  success_201: !include libs/responses/success_201.raml
+
+
+/despatch:
+  is : [headersRequired]
+
+  type: 
+      despatch_order:
+        recordSummary: Post sales order despatch details
+        recordDescription: update the sales order despatch details in ATLAS
+        recordType: schema.sales_order_despatchDetails
+        recordExample: !include request/despatch.json
+        outputExample_201: !include response/despatch_201.json
+  
+  get:
+    description: get order details
+    queryParameters:
+        companyCode:
+          description: organizational entity responsible for the delivery
+          type: string
+          minLength: 3
+          maxLength: 4
+          required: true
+        profile:
+          description: a way to group idKey sharing the same oragnizational data (sales org + document type)
+          type: string
+          minLength: 1
+          maxLength: 10
+          required: false
+        sourceType: 
+          description: type of location (plant or customer) where the delivery was created
+          type: string
+          minLength: 1
+          maxLength: 20
+          required: false
+        destinationType:
+          description: type of location (plant or customer) where the delivery will be shiped
+          type: string
+          minLength: 1
+          maxLength: 20
+          required: true
+        despatchOrderFrom:
+          description: despatch order number
+          type: string
+          minLength: 0
+          maxLength: 10
+          required: false
+        despatchOrderTo:
+          description: despatch order number
+          type: string
+          minLength: 0
+          maxLength: 10 
+          required: false
+    responses:
+        200:
+          body:
+            application/json:
+                example: !include response/despatch_200.json
+
+       

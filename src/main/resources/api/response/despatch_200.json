@@ -1,0 +1,208 @@
+{
+  "getDespatchOrderDetailsResponse": {
+    "despatchOrders": {
+      "despatchOrder": [
+        {
+          "despatchOrder": "AB00123",
+          "despatchOrderType": "Standard Order",
+          "salesOrganization": "Mars Procurement Team",
+          "distributionChannel": "EX",
+          "division": "AE",
+          "soldToParty": {
+            "location": "10295089",
+            "name1": "The Boots Company Plc",
+            "name2": "The Boots Company Plc",
+            "street1": "D90 East S10",
+            "street2": "D90 East S10",
+            "postalCode": "NG90 1BS",
+            "city": "Nottingham",
+            "state": "Nottinghamshire",
+            "country": "GB",
+            "phone": "02012345678",
+            "internationalLocationNumber": "5000167000078"
+          },
+          "destination": {
+            "location": "10295089",
+            "name1": "The Boots Company Plc",
+            "name2": "The Boots Company Plc",
+            "street1": "D90 East S10",
+            "street2": "D90 East S10",
+            "postalCode": "NG90 1BS",
+            "city": "Nottingham",
+            "state": "Nottinghamshire",
+            "country": "GB",
+            "phone": "02012345678",
+            "internationalLocationNumber": "5000167000078"
+          },
+          "source": {
+            "location": "0866",
+            "name1": "Asfordby DC - Chocolate",
+            "name2": "Asfordby Storage & Haulage",
+            "street1": "Saxby Road",
+            "street2": "Saxby Road",
+            "postalCode": "LE13 1BX",
+            "city": "Melton Mowbray",
+            "state": "Leicestershire",
+            "country": "GB",
+            "phone": "02087452351",
+            "internationalLocationNumber": "5000167000078"
+          },
+          "billToParty": {
+            "location": "0866",
+            "name1": "Asfordby DC - Chocolate",
+            "name2": "Asfordby Storage & Haulage",
+            "street1": "Saxby Road",
+            "street2": "Saxby Road",
+            "postalCode": "LE13 1BX",
+            "city": "Melton Mowbray",
+            "state": "Leicestershire",
+            "country": "GB",
+            "phone": "02087452351",
+            "internationalLocationNumber": "5000167000078"
+          },
+          "Payer": {
+            "location": "0866",
+            "name1": "Asfordby DC - Chocolate",
+            "name2": "Asfordby Storage & Haulage",
+            "street1": "Saxby Road",
+            "street2": "Saxby Road",
+            "postalCode": "LE13 1BX",
+            "city": "Melton Mowbray",
+            "state": "Leicestershire",
+            "country": "GB",
+            "phone": "02087452351",
+            "internationalLocationNumber": "5000167000078"
+          },
+          "requestedDeliveryDate" : "2020-11-13T00:00:00CET",
+          "documentDate" : "2020-11-13T00:00:00CET",
+          "customerPurchaseOrderDate" : "2020-11-13T00:00:00CET",
+          "customerPurchaseOrderType" : "Orally",
+          "customerPurchaseOrderNumber" : "Purchase #1234",
+          "customerReference" : "XB156245E",
+          "shipToPurchaseOrderDate" : "2020-11-13T00:00:00CET",
+          "shipToPurchaseOrderType" : "Phone",
+          "shipToPurchaseOrderNumber" : "Purchase #1234",
+          "shipToReference" : "XB156245E",
+          "incotermPart1" : "EXW",
+          "incotermPart2" : "xxxxxxx",
+          "orderReason" : "001",
+          "orderReasonText" : "Commercial Writeoff",
+          "referenceDocumentNumber" : "XB156245E",
+          "directToCustRefNumber" : "1254456244",
+          "meanOfTransport" : "10",
+          "shippingStrategy" : "10",
+          "billOfLading" : "GF02012001",
+          "currentOrderNumber" : "1",
+          "totalOrderNumber" : "3",
+          "customerDelvAppointmentSt" : "2020-11-13T23:00:00CET",
+          "customerDelvAppointmentEnd" : "2020-11-13T23:00:00CET",
+          "latestDeliveryDate" : "2020-11-13T00:00:00CET",
+          "forwardingAgent" : "AGT002",
+          "forwardingAgentName" : "DHL",
+          "creditManagementStatus" : "A",
+          "creditManagementStatusText" : "Approved",
+          "deliveryStatus" : "B",
+          "deliveryStatusText" : "Free Text",
+          "rejectionStatus" : "C",
+          "rejectionStatusText" : "Free Text",
+          "goodsMovementStatus" : "B",
+          "goodsMovementStatusText" : "Free Text",
+          "billingStatus" : "C",
+          "billingStatusText" : "Free Text",
+          "grossWeight" : "123.45",
+          "weightUom" : "KG",
+          "volume" : "234.56",
+          "volumeUom" : "FT3",
+          "palletSpace" : "33",
+          "palletBase1" : "66",
+          "palletType1" : "EP",
+          "palletBase2" : "UP",
+          "palletType2" : "EP",
+          "palletBase3" : "UP",
+          "palletType3" : "EP",
+          "palletBase4" : "UP",
+          "palletType4" : "EP",
+          "palletBase5" : "UP",
+          "palletType5" : "EP",			
+          "homogeneousPallet" : "66",
+          "heterogeneousPallet" : "2",
+          "homogeneousLayer" : "0",
+          "looseCase" : "0",
+          "tradingUnit" : "250",
+          "shippingInstructionText" : "Deliver at gate 44",
+          "commentText" : "Comment 1 :…",					
+          "flow": {
+            "delivery": [
+              {
+                "deliveryNumber": "ABC0032",
+                "deliveryCreationDate": "2020-11-13T23:00:00CET",
+                "deliveryPlannedGoodsIssueDate": "2020-11-13T23:00:00CET",
+                "deliveryActualGoodsIssueDate": "2020-11-13T23:00:00CET"
+              }
+            ],
+            "billingDocument": [
+              {
+                "billingDocumentNumber": "DCV983",
+                "billingCreationDate": "2020-11-13T23:00:00CET"
+              }
+            ]
+          },
+          "items": {
+            "item": [
+              {
+                "position" : "000010",
+                "materialReference" : "AK266",
+                "materialDescription" : "TOPIC MP 14x4x47g UK",
+                "customerMaterialReference" : "Walmart123",
+                "internationalArticleNumber" : "127816287628762",
+                "quantity" : "15",
+                "uom" : "CS",
+                "transportationGroup" : "0001",
+                "businessSegment" : "01",
+                "grossWeight" : "123.45",
+                "weightUom" : "KG",
+                "volume" : "234.56",
+                "volumeUom" : "M3",
+                "palletSpace" : "33",
+                "palletBase" : "66",
+                "palletType" : "EP",
+                "homogeneousPallet" : "66",
+                "heterogeneousPallet" : "2",
+                "homogeneousLayer" : "0",
+                "looseCase" : "0",
+                "tradingUnit" : "250",
+                "flavourMigrationType" : "ABS",
+                "plannedQuotaConfirmedQty" : "15",
+                "unplannedQuotaConfirmedQty" : "15",
+                "confirmedQuantity" : "15",
+                "plannedMaterialAvailabilityDate" : "2020-11-13T23:00:00CET",
+                "transportationPlanningDate" : "2020-11-13T23:00:00CET",
+                "plannedLoadingDate" : "2020-11-13T23:00:00CET",
+                "plannedGoodsIssueDate" : "2020-11-13T23:00:00CET",
+                "plannedDeliveryDate" : "2020-11-13T23:00:00CET",
+                "priority" : "02",
+                "stockType" : "unrestricted",
+                "free" : "Free",
+                "plant" : "GB40",
+                "storageLocation" : "H001",
+                "deliveryItem": {
+                  "deliveryNumber": "0080012345",
+                  "deliveryPosition": "000010",
+                  "deliveryQuantity": "10",
+                  "goodsIssueQuantity": "12",
+                  "uom": "PAL"
+                },
+                "billingDocumentItem": {
+                  "billingDocumenntNumber": "0080012345",
+                  "billingDocumentPosition": "000010",
+                  "billedQuantity": "10",
+                  "uom": "CS"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+#%RAML 1.0 ResourceType
+
+    description: <<recordSummary>>
+    post:      
+      description: <<recordDescription>>
+      body:
+        type: <<recordType>>
+        example: <<recordExample>>            
+      is: [success_201: {recordExample: <<outputExample_201>>}]

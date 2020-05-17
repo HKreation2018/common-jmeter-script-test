@@ -1,0 +1,18 @@
+#%RAML 1.0 Trait
+headers:
+  client_id:
+    description: name of the event  <stockPosition.change>".
+    type: string
+    required: true
+  client_secret:
+    description: Source System ID.
+    type: string
+    required: true
+  sourceType:
+    description: Type of source location (Plant,Vendor or Customer).
+    type: string
+    required: true
+  destinationType:
+    description: Type of destination location (Plant,Vendor or Customer).
+    type: string
+    required: true

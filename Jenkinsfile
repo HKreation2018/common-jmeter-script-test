@@ -26,7 +26,7 @@ pipeline {
       }
     } 
 	
-	/*stage('performance test') {       
+	stage('performance test') {       
       steps {
              bat 'mvn verify -DthreadCount=${THREADS} -DrampupTime=${RAMPUP} -DdurationSecond=${DURATION} -DloopCountNo=${LOOPCOUNT}'
       }
@@ -38,6 +38,6 @@ pipeline {
 			publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'target/jmeter/reports/worldTimeZoneTest', reportFiles: 'index.html', reportName: 'Performance Report', reportTitles: ''])
         }
 	}
-    }*/
+    }
   }
 }

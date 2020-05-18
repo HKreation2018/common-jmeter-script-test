@@ -51,6 +51,7 @@
                         <rampup>${rampupTime}</rampup>
                         <duration>${durationSecond}</duration>
 						<loopcount>${loopCountNo}</loopcount>
+						<csvdataconfig>${csvfile}</csvdataconfig>
                    </propertiesUser>
                </configuration>
                 <executions>

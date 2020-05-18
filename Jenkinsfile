@@ -16,7 +16,7 @@ pipeline {
       }
     }
 
-    stage('Deploy Development') {
+   /* stage('Deploy Development') {
       environment {
         ENVIRONMENT = 'Sandbox'
         APP_NAME = 'common-jmeter-script-test'
@@ -24,7 +24,7 @@ pipeline {
       steps {
             bat 'mvn -U -V -e -B -DskipTests deploy -DmuleDeploy -Dmule.version="%MULE_VERSION%" -Danypoint.username="%DEPLOY_CREDS_USR%" -Danypoint.password="%DEPLOY_CREDS_PSW%" -Dcloudhub.app="%APP_NAME%" -Dcloudhub.environment="%ENVIRONMENT%" -Dcloudhub.worker="%WORKER%"'
       }
-    } 
+    } */
 	
 	stage('performance test') {       
       steps {
@@ -35,7 +35,7 @@ pipeline {
         always {
             archiveArtifacts artifacts: 'target/jmeter/results/*.csv', caseSensitive: false, defaultExcludes: false, followSymlinks: false, onlyIfSuccessful: true
 			perfReport 'target/jmeter/results/*.csv'
-			publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'target/jmeter/reports/worldTimeZoneTest', reportFiles: 'index.html', reportName: 'Performance Report', reportTitles: ''])
+			publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'target/jmeter/reports/Test Plan', reportFiles: 'index.html', reportName: 'Performance Report', reportTitles: ''])
         }
 	}
     }

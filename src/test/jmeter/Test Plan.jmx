@@ -81,7 +81,8 @@
               <stringProp name="CounterConfig.incr">1</stringProp>
               <stringProp name="CounterConfig.name">counter</stringProp>
               <stringProp name="CounterConfig.format"></stringProp>
-              <boolProp name="CounterConfig.per_user">false</boolProp>
+              <boolProp name="CounterConfig.per_user">true</boolProp>
+              <boolProp name="CounterConfig.reset_on_tg_iteration">true</boolProp>
             </CounterConfig>
             <hashTree/>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="[HTTP] - Rest API Testing - ${test.description}" enabled="true">

@@ -52,6 +52,8 @@
                         <duration>${durationSecond}</duration>
 						<loopcount>${loopCountNo}</loopcount>
 						<csvdataconfig>${csvfile}</csvdataconfig>
+						<rowstart>${startingrow}</rowstart>
+						<rowend>${endingrow}</rowend>
                    </propertiesUser>
                </configuration>
                 <executions>

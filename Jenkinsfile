@@ -28,7 +28,7 @@ pipeline {
 	
 	stage('performance test') {       
       steps {
-             bat 'mvn verify -DthreadCount=${THREADS} -DrampupTime=${RAMPUP} -DdurationSecond=${DURATION} -DloopCountNo=${LOOPCOUNT} -Dcsvfile=${CSVFILENAME}'
+             bat 'mvn verify -DthreadCount=${THREADS} -DrampupTime=${RAMPUP} -DdurationSecond=${DURATION} -DloopCountNo=${LOOPCOUNT} -Dcsvfile=${CSVFILENAME} -Dstartingrow=${START_ROW} -Dendingrow=${END_ROW}'
       }
 	  
 	  post {

@@ -44,12 +44,10 @@
                <skipTests>false</skipTests>
                <propertiesUser>
                   <threads>${threadCount}</threads>
-                  <rampup>${rampupTime}</rampup>
-                  <duration>${durationSecond}</duration>
-                  <loopcount>${loopCountNo}</loopcount>
                   <csvdataconfig>${csvfile}</csvdataconfig>
                   <rowstart>${startingrow}</rowstart>
                   <rowend>${endingrow}</rowend>
+				  <completeflag>${completerunrequired}</completeflag>
                </propertiesUser>
             </configuration>
             <executions>

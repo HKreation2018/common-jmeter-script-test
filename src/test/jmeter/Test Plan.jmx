@@ -20,7 +20,7 @@
       <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
         <stringProp name="delimiter">,</stringProp>
         <stringProp name="fileEncoding"></stringProp>
-        <stringProp name="filename">${__P(csvdataconfig)}</stringProp>
+        <stringProp name="filename">orders_1.csv</stringProp>
         <boolProp name="quotedData">true</boolProp>
         <boolProp name="recycle">false</boolProp>
         <stringProp name="shareMode">shareMode.thread</stringProp>
@@ -31,6 +31,11 @@
       <hashTree/>
       <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
         <collectionProp name="Arguments.arguments">
+          <elementProp name="complete_run" elementType="Argument">
+            <stringProp name="Argument.name">complete_run</stringProp>
+            <stringProp name="Argument.value">${__P(completeflag,true)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
           <elementProp name="start_row" elementType="Argument">
             <stringProp name="Argument.name">start_row</stringProp>
             <stringProp name="Argument.value">${__P(rowstart,2)}</stringProp>
@@ -39,11 +44,6 @@
           <elementProp name="end_row" elementType="Argument">
             <stringProp name="Argument.name">end_row</stringProp>
             <stringProp name="Argument.value">${__P(rowend,3)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="complete_run" elementType="Argument">
-            <stringProp name="Argument.name">complete_run</stringProp>
-            <stringProp name="Argument.value">${__P(completeflag,&quot;YES&quot;)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
@@ -66,7 +66,7 @@
       </ThreadGroup>
       <hashTree>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-          <stringProp name="IfController.condition">${__jexl3(${test.id} &lt;= ${end_row} &amp;&amp; ${test.id} &gt;= ${start_row} &amp;&amp; ${complete_run} != &quot;YES&quot; )}</stringProp>
+          <stringProp name="IfController.condition">${__jexl3(${test.id} &lt;= ${end_row} &amp;&amp; ${test.id} &gt;= ${start_row} &amp;&amp; ${complete_run} == false )}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
         </IfController>
@@ -241,7 +241,7 @@ if(!vars.get(&quot;input.json&quot;).equals(&quot;&quot;)){
       </ThreadGroup>
       <hashTree>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-          <stringProp name="IfController.condition">${__jexl3(${complete_run} != &quot;NO&quot; )}</stringProp>
+          <stringProp name="IfController.condition">${__jexl3(${complete_run} == true )}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
         </IfController>

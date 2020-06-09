@@ -45,6 +45,8 @@
                <propertiesUser>
                   <threads>${threadCount}</threads>
                   <csvdataconfig>${csvfile}</csvdataconfig>
+				  <rampup>${rampupinterval}</rampup>
+				  <duration>${durationtime}</duration>
                   <rowstart>${startingrow}</rowstart>
                   <rowend>${endingrow}</rowend>
 				  <completeflag>${completerunrequired}</completeflag>

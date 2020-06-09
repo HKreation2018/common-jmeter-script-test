@@ -1,6 +1,6 @@
-test.id,test.description,http.host,http.port,http.path,http.method,input.json,header_count,headername_1,headervalue_1,headername_2,headervalue_2,headername_3,headervalue_3,headername_4,headervalue_4
-1,Get orders by search,common-jmeter-script-test.us-e2.cloudhub.io,,/api/despatch?companyCode=123&profile=123&sourceType=123&destinationType=123&despatchOrderFrom=123&despatchOrderTo=123,GET,,4,client_id,id1,client_secret,secret1,sourceType,type1,destinationType,dest1
-2,create orders,common-jmeter-script-test.us-e2.cloudhub.io,,/api/despatch,POST,despatch-post.json,4,client_id,id2,client_secret,secret2,sourceType,type2,destinationType,dest2
-3,mocktarget-post,mocktarget.apigee.net,,/echo,POST,mocktarget-post.json,0,,,,,,,,
-4,mocktarget-showxml,mocktarget.apigee.net,,/xml,GET,,0,,,,,,,,
-5,mocktarget-iloveapis,mocktarget.apigee.net,,/iloveapis,GET,,0,,,,,,,,
+test.id,test.description,http.host,http.port,http.path,http.method,content.type,input.json,header_count,headername_1,headervalue_1,headername_2,headervalue_2,headername_3,headervalue_3,headername_4,headervalue_4,headername_5,headervalue_5
+1,Get orders by search,common-jmeter-script-test.us-e2.cloudhub.io,,/api/despatch?companyCode=123&profile=123&sourceType=123&destinationType=123&despatchOrderFrom=123&despatchOrderTo=123,GET,,,4,client_id,id1,client_secret,secret1,sourceType,type1,destinationType,dest1,,
+2,create orders,common-jmeter-script-test.us-e2.cloudhub.io,,/api/despatch,POST,application/json,despatch-post.json,5,client_id,id2,client_secret,secret2,sourceType,type2,destinationType,dest2,Content-Type,application/json
+3,mocktarget-post,mocktarget.apigee.net,,/echo,POST,application/json,mocktarget-post.json,1,Content-Type,application/json,,,,,,,,
+4,mocktarget-showxml,mocktarget.apigee.net,,/xml,GET,,,0,,,,,,,,,,
+5,mocktarget-iloveapis,mocktarget.apigee.net,,/iloveapis,GET,,,0,,,,,,,,,,

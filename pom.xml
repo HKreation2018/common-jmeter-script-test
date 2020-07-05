@@ -50,6 +50,8 @@
                   <rowstart>${startingrow}</rowstart>
                   <rowend>${endingrow}</rowend>
 				  <completeflag>${completerunrequired}</completeflag>
+				  <client_id>${clientid}</client_id>
+				  <client_secret>${clientsecret}</client_secret>
                </propertiesUser>
             </configuration>
             <executions>

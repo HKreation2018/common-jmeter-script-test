@@ -1,7 +1,7 @@
-test.id,test.description,http.host,http.port,http.path,http.method,content.type,input.json,header_count,headername_1,headervalue_1,headername_2,headervalue_2,headername_3,headervalue_3,headername_4,headervalue_4,headername_5,headervalue_5
-1,Get orders by search,common-jmeter-script-test.us-e2.cloudhub.io,,/api/despatch?companyCode=123&profile=123&sourceType=123&destinationType=123&despatchOrderFrom=123&despatchOrderTo=123,GET,,,4,clientid,id1,clientsecret,secret1,sourceType,type1,destinationType,dest1,,
-2,create orders,common-jmeter-script-test.us-e2.cloudhub.io,,/api/despatch,POST,application/json,despatch-post.json,5,clientid,id2,clientsecret,secret2,sourceType,type2,destinationType,dest2,Content-Type,application/json
-3,mocktarget-post,mocktarget.apigee.net,,/echo,POST,application/json,mocktarget-post.json,1,Content-Type,application/json,,,,,,,,
-4,mocktarget-showxml,mocktarget.apigee.net,,/xml,GET,,,0,,,,,,,,,,
-5,mocktarget-iloveapis,mocktarget.apigee.net,,/iloveapis,GET,,,0,,,,,,,,,,
-6,stockmovement-GET,dev.api.effem.com,,/common-warehouse-expdev/v1.0/orderExternalManufacturingBackflushStock?sourceType=ZPLANT&location=ZH02&materialReference=ZFGA_MAT1&companyCode=123&scenario=TRANSFERTOSUBCONTRACTINGLOCATION&documentDateFrom=2020-04-01T00:00:00CET&documentDateTo=2020-06-10T00:00:00CET,GET,,,2,sourceType,test,destinationType,test,,,,,,
+test.id,test.description,http.protocol,http.host,http.port,http.path,http.method,content.type,input.json,header_count,headername_1,headervalue_1,headername_2,headervalue_2,headername_3,headervalue_3,headername_4,headervalue_4,headername_5,headervalue_5
+1,Get orders by search,http,common-jmeter-script-test.us-e2.cloudhub.io,,/api/despatch?companyCode=123&profile=123&sourceType=123&destinationType=123&despatchOrderFrom=123&despatchOrderTo=123,GET,,,4,clientid,id1,clientsecret,secret1,sourceType,type1,destinationType,dest1,,
+2,create orders,http,common-jmeter-script-test.us-e2.cloudhub.io,,/api/despatch,POST,application/json,despatch-post.json,5,clientid,id2,clientsecret,secret2,sourceType,type2,destinationType,dest2,Content-Type,application/json
+3,mocktarget-post,http,mocktarget.apigee.net,,/echo,POST,application/json,mocktarget-post.json,1,Content-Type,application/json,,,,,,,,
+4,mocktarget-showxml,http,mocktarget.apigee.net,,/xml,GET,,,0,,,,,,,,,,
+5,mocktarget-iloveapis,http,mocktarget.apigee.net,,/iloveapis,GET,,,0,,,,,,,,,,
+6,stockmovement-GET,https,dev.api.effem.com,,/common-warehouse-expdev/v1.0/orderExternalManufacturingBackflushStock?sourceType=ZPLANT&location=ZH02&materialReference=ZFGA_MAT1&companyCode=123&scenario=TRANSFERTOSUBCONTRACTINGLOCATION&documentDateFrom=2020-04-01T00:00:00CET&documentDateTo=2020-06-10T00:00:00CET,GET,,,2,sourceType,test,destinationType,test,,,,,,

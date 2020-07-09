@@ -20,7 +20,7 @@
       <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
         <stringProp name="delimiter">,</stringProp>
         <stringProp name="fileEncoding"></stringProp>
-        <stringProp name="filename">orders_1.csv</stringProp>
+        <stringProp name="filename">${__P(csvdataconfig)}</stringProp>
         <boolProp name="quotedData">true</boolProp>
         <boolProp name="recycle">true</boolProp>
         <stringProp name="shareMode">shareMode.group</stringProp>
@@ -102,7 +102,7 @@
             </elementProp>
             <stringProp name="HTTPSampler.domain">${http.host}</stringProp>
             <stringProp name="HTTPSampler.port">${http.port}</stringProp>
-            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.protocol">${http.protocol}</stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
             <stringProp name="HTTPSampler.path">${http.path}</stringProp>
             <stringProp name="HTTPSampler.method">${http.method}</stringProp>
@@ -192,7 +192,7 @@ if(!vars.get(&quot;input.json&quot;).equals(&quot;&quot;)){
             </elementProp>
             <stringProp name="HTTPSampler.domain">${http.host}</stringProp>
             <stringProp name="HTTPSampler.port">${http.port}</stringProp>
-            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.protocol">${http.protocol}</stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
             <stringProp name="HTTPSampler.path">${http.path}</stringProp>
             <stringProp name="HTTPSampler.method">${http.method}</stringProp>
